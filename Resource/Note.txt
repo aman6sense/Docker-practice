@@ -1,0 +1,10 @@
+
+DynamoDB:
+	A. Go to the 'DynamoDBLocal.jr' file and run cmd/terminal
+
+	B. Terminal 1
+		1. java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+
+	C. Terminal 2
+		1. aws configure ( if not configure then configure first, Otherwise no need )
+		2. aws dynamodb list-tables --endpoint-url http://localhost:8000

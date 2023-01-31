@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+    cache:
+        image: redis:7.0.8-alpine
+        restart: always
+        ports:
+            - '6379:6379'
+        # volumes:
+        #     - cache:/data
+        networks:
+            - global_network
+networks:
+    global_network:
+        external: true
